@@ -49,8 +49,6 @@
       color: #f5deb3;
       text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
     }
-
-    /* Cuenta regresiva con decoración ranchera */
     .countdown-wrapper {
       max-width: 700px;
       margin: -80px auto 40px;
@@ -76,7 +74,6 @@
       font-weight: 700;
       background-blend-mode: multiply;
     }
-    /* SVG caballo decorativo a la izquierda */
     .countdown svg.horse-icon {
       position: absolute;
       left: 1.5rem;
@@ -87,7 +84,6 @@
       fill: #a1683a;
       filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
     }
-    /* Adornos superior e inferior */
     .ornament {
       max-width: 700px;
       margin: 0 auto 12px;
@@ -99,7 +95,6 @@
       width: 100%;
       height: 100%;
     }
-
     .details {
       background: rgba(255, 255, 255, 0.95);
       margin: 20px auto 40px;
@@ -152,7 +147,6 @@
       text-align: center;
       animation: bounce 1s ease forwards;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -166,7 +160,6 @@
       40% {transform: translateY(-20px);}
       60% {transform: translateY(-10px);}
     }
-
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2.5rem;
@@ -192,8 +185,8 @@
 </head>
 <body>
 
-  <!-- Música de fondo ranchera -->
-  <audio autoplay loop>
+  <!-- Audio sin autoplay -->
+  <audio id="bgm" loop>
     <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Vicente_Fernandez/El_Rey.mp3" type="audio/mpeg" />
     Tu navegador no soporta audio HTML5.
   </audio>
@@ -205,36 +198,46 @@
       <p>Acompáñanos a celebrar a Adelmo Contreras</p>
     </div>
   </div>
-<br><br><br>
-  <!-- Ornamento superior -->
-  <div class="ornament" aria-hidden="true">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" >
-    </svg>
+
+  <!-- Botón para reproducir música -->
+  <div style="text-align:center; margin: 2rem;">
+    <button onclick="document.getElementById('bgm').play()" style="
+      padding: 0.8rem 1.5rem;
+      background-color: #6b3e26;
+      color: #fffbe6;
+      border: 2px solid #f5deb3;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      transition: background 0.3s, transform 0.3s;">
+      ▶️ Reproducir música ranchera
+    </button>
   </div>
 
-  <!-- Cuenta regresiva -->
+  <div class="ornament" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"></svg>
+  </div>
+
   <div class="countdown-wrapper" aria-live="polite" aria-atomic="true">
     <div class="countdown" id="countdown" role="timer" aria-label="Cuenta regresiva para la celebración">
-      <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 52c2-4 4-6 8-6s8-2 10-6 6-10 10-12 8-6 10-6c-1-1-4-3-7-3-4 0-8 3-10 5-3 3-5 6-6 9-1 1-2 1-3 0-1-1-1-2-2-4-1-3-4-5-5-7-1-2-2-3-4-3-2 0-4 1-5 2-3 4-3 9-3 14 0 4 1 7 3 10z" />
       </svg>
       Cargando cuenta regresiva...
     </div>
   </div>
 
-  <!-- Ornamento inferior -->
   <div class="ornament" aria-hidden="true">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" >
-    </svg>
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"></svg>
   </div>
 
   <div class="details">
     <h2>Detalles del evento</h2>
     <p><strong>Fecha:</strong> Miércoles 30 de julio de 2025</p>
     <p><strong>Hora:</strong> 6:00 PM</p>
-    <p><strong>Lugar:</strong>  Barrio El Centro</p>
-
-
+    <p><strong>Lugar:</strong> Barrio El Centro</p>
     <div class="rsvp">
       <p>Por favor confirma tu asistencia</p>
       <button onclick="confirmarAsistencia()">Confirmar asistencia</button>
@@ -243,14 +246,12 @@
   </div>
 
   <script>
-    // Animación bounce en confirmación
     function confirmarAsistencia() {
       const mensaje = document.getElementById('mensajeConfirmacion');
       mensaje.style.display = 'block';
       mensaje.style.animation = 'bounce 1s ease forwards';
     }
 
-    // Cuenta regresiva
     const countdownElement = document.getElementById('countdown');
     const eventDate = new Date('July 30, 2025 18:00:00').getTime();
 
@@ -259,9 +260,7 @@
       const distance = eventDate - now;
 
       if (distance < 0) {
-        countdownElement.innerHTML = `<svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute; left:1.5rem; top:50%; transform: translateY(-50%); width:64px; height:64px; fill:#a1683a; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));">
-          <path d="M12 52c2-4 4-6 8-6s8-2 10-6 6-10 10-12 8-6 10-6c-1-1-4-3-7-3-4 0-8 3-10 5-3 3-5 6-6 9-1 1-2 1-3 0-1-1-1-2-2-4-1-3-4-5-5-7-1-2-2-3-4-3-2 0-4 1-5 2-3 4-3 9-3 14 0 4 1 7 3 10z" />
-        </svg> ¡El evento ya comenzó!`;
+        countdownElement.innerHTML = `🎉 ¡El evento ya comenzó!`;
         clearInterval(countdownInterval);
         return;
       }
@@ -272,7 +271,7 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       countdownElement.innerHTML = `
-        <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 52c2-4 4-6 8-6s8-2 10-6 6-10 10-12 8-6 10-6c-1-1-4-3-7-3-4 0-8 3-10 5-3 3-5 6-6 9-1 1-2 1-3 0-1-1-1-2-2-4-1-3-4-5-5-7-1-2-2-3-4-3-2 0-4 1-5 2-3 4-3 9-3 14 0 4 1 7 3 10z" />
         </svg>
         Faltan <strong>${days}</strong> días, <strong>${hours}</strong> horas, <strong>${minutes}</strong> minutos y <strong>${seconds}</strong> segundos para la celebración`;
