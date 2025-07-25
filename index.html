@@ -27,32 +27,35 @@
     }
 
     /* Contenedor principal mejorado */
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      margin: 3rem auto 4rem auto;
-      padding: 3rem 3.5rem 4rem 3.5rem;
-      background:
-        linear-gradient(145deg, #fff8e1 0%, #f1e1b3 100%);
-      border-radius: 24px;
-      border: 6px double #b28a39;
-      box-shadow:
-        0 20px 40px rgba(75, 55, 30, 0.45),
-        inset 0 0 15px rgba(255, 255, 255, 0.7);
-      backdrop-filter: contrast(1.1);
-      transition: box-shadow 0.4s ease;
-      text-align: center;
-      font-weight: 600;
-      text-shadow: 0 1px 2px rgba(98, 69, 17, 0.25);
-    }
-    .container:hover,
-    .container:focus-within {
-      box-shadow:
-        0 28px 50px rgba(75, 55, 30, 0.65),
-        inset 0 0 25px rgba(255, 255, 255, 0.85);
-      cursor: default;
-    }
+   /* Contenedor principal sin tono amarillo */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 3rem auto 4rem auto;
+  padding: 3rem 3.5rem 4rem 3.5rem;
+  background: #ffffff; /* Fondo blanco puro */
+  border-radius: 24px;
+  border: 3px solid #cccccc; /* borde gris claro */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12),
+    inset 0 0 10px rgba(255, 255, 255, 0.9);
+  backdrop-filter: contrast(1.05);
+  transition: box-shadow 0.4s ease;
+  text-align: center;
+  font-weight: 600;
+  color: #333333; /* texto gris oscuro */
+  text-shadow: none;
+}
+
+.container:hover,
+.container:focus-within {
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.18),
+    inset 0 0 20px rgba(255, 255, 255, 0.95);
+  cursor: default;
+}
+
 
     /* Tipografía rancho */
     h1, h2 {
