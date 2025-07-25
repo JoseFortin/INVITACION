@@ -70,26 +70,34 @@
       color: #4a3c2c;
     }
 
-    /* Botón confirmación */
+    /* Botón confirmación mejorado */
     .btn-confirm {
       display: inline-block;
       margin: 2.5rem auto 0 auto;
-      background: #b28a39;
-      color: white;
-      border: none;
-      padding: 0.9rem 2.8rem;
+      background: transparent;
+      color: #b28a39;
+      border: 3.5px solid #b28a39; /* borde amarillo-café */
+      padding: 0.9rem 3.2rem;
       font-size: 1.3rem;
       font-family: 'Special Elite', monospace;
-      border-radius: 30px;
+      border-radius: 40px;
       cursor: pointer;
-      box-shadow: 0 6px 12px rgba(178, 138, 57, 0.6);
-      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(178, 138, 57, 0.4);
       text-decoration: none;
       user-select: none;
+      transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.25s ease;
     }
-    .btn-confirm:hover {
-      background-color: #d1af3c;
-      box-shadow: 0 8px 18px rgba(209, 175, 60, 0.8);
+    .btn-confirm:hover,
+    .btn-confirm:focus {
+      background-color: #b28a39;
+      color: white;
+      box-shadow: 0 8px 22px rgba(178, 138, 57, 0.75);
+      transform: scale(1.06);
+      outline: none;
     }
 
     /* Contador */
@@ -168,12 +176,14 @@
       <span id="seconds">00</span>s
     </div>
 
-    <a href="https://wa.me/504XXXXXXXX" class="btn-confirm" target="_blank" rel="noopener">Confirmar asistencia</a>
+    <a href="https://wa.me/504XXXXXXXX" class="btn-confirm" role="button" target="_blank" rel="noopener noreferrer" aria-label="Confirmar asistencia vía WhatsApp">
+      Confirmar asistencia
+    </a>
   </main>
 
   <script>
-    // Configura la fecha y hora del evento aquí (año, mes-1, día, hora, min, seg)
-    const eventDate = new Date(2025, 7, 2, 17, 0, 0); // 2 agosto 2025, 17:00
+    // Fecha y hora del evento (Año, Mes-1, Día, Hora, Minutos, Segundos)
+    const eventDate = new Date(2025, 7, 2, 17, 0, 0); // 2 agosto 2025, 17:00 hrs
 
     function updateCountdown() {
       const now = new Date();
