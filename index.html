@@ -2,89 +2,136 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Invitación Cumpleaños Adelmo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1545256433-06de0d6f49c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background-color: #f8f1e4;
       color: #4a3c2c;
     }
 
-    .container {
-      background-color: rgba(255, 248, 230, 0.96); /* cálido claro */
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    .hero {
+      background-image: url('https://i.imgur.com/0zD3cd9.jpg'); /* Madera */
+      background-size: cover;
+      background-position: center;
+      padding: 5rem 2rem;
       text-align: center;
-      border: 6px solid #c59b69;
+      color: white;
+      position: relative;
     }
 
-    h1 {
+    .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin-bottom: 10px;
-      color: #6b3e1d;
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeInDown 2s ease-in-out;
     }
 
-    h2 {
-      font-size: 1.6em;
-      margin-bottom: 30px;
-      color: #8b5e3c;
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      animation: fadeIn 3s ease-in-out;
     }
 
     .details {
-      font-size: 1.2em;
-      margin-top: 20px;
+      background: rgba(255, 250, 240, 0.95); /* Fondo cálido */
+      margin: 2rem auto;
+      padding: 2.5rem;
+      max-width: 700px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 5px solid #c8a97e;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #5c4033;
+    }
+
+    .details p {
+      font-size: 1.1rem;
       line-height: 1.6;
+      margin-bottom: 1rem;
     }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 1em;
-      color: #6b4c36;
+    .photo-section {
+      text-align: center;
+      margin: 3rem auto;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    @media screen and (max-width: 768px) {
-      .container {
-        margin: 20px;
-        padding: 25px;
-      }
+    .photo-section img {
+      width: 250px;
+      height: auto;
+      border-radius: 12px;
+      border: 4px solid #c8a97e;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
-      h1 {
-        font-size: 2.4em;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-      h2 {
-        font-size: 1.3em;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-      .details {
-        font-size: 1em;
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>¡Estás Invitado!</h1>
-    <h2>Celebramos el cumpleaños de Adelmo</h2>
-    <div class="details">
-      <p><strong>Fecha:</strong> Sábado 2 de agosto de 2025</p>
-      <p><strong>Hora:</strong> 5:00 PM</p>
-      <p><strong>Lugar:</strong> Casa de Alex</p>
-      <p>Ven y acompáñanos a pasar una tarde inolvidable con comida, música y diversión.</p>
-    </div>
-    <div class="footer">
-      <p>¡No faltes!</p>
-    </div>
+  <div class="hero">
+    <h1>Estás Invitado</h1>
+    <p>¡A celebrar el cumpleaños de Adelmo!</p>
   </div>
+
+  <div class="details">
+    <h2>Detalles del Evento</h2>
+    <p><strong>Fecha:</strong> Sábado 2 de agosto de 2025</p>
+    <p><strong>Hora:</strong> 5:00 PM</p>
+    <p><strong>Lugar:</strong> Casa de Alex</p>
+    <p><strong>Dirección:</strong> Colonia Los Pinos, Calle 8</p>
+    <p>¡Será un momento especial con comida, música y mucha alegría!</p>
+  </div>
+
+  <div class="photo-section">
+    <img src="https://i.imgur.com/r3yKwln.jpg" alt="Decoración cumpleaños elegante" />
+  </div>
+
+  <script>
+    // Animaciones extra si deseas agregar scroll u otros efectos
+    window.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll('.details, .photo-section');
+      elements.forEach((el, index) => {
+        el.style.opacity = 0;
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, 500 * index);
+      });
+    });
+  </script>
 </body>
 </html>
