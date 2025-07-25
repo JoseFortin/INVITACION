@@ -6,47 +6,6 @@
   <title>Invitación Cumpleaños Adelmo - Estilo Rancho Mejorado</title>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    @media (max-width: 480px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .container {
-    width: 95%;
-    padding: 2rem 1.5rem 2.5rem 1.5rem;
-    margin: 1.5rem auto 2.5rem auto;
-    border-radius: 18px;
-  }
-
-  .btn-confirm {
-    font-size: 1.1rem;
-    padding: 0.7rem 2.2rem;
-    border-radius: 30px;
-    margin-top: 2rem;
-  }
-
-  #countdown {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-  }
-
-  #countdown span {
-    min-width: 44px;
-    padding: 0.2rem 0.5rem;
-    margin: 0 0.2rem;
-    font-size: 0.95rem;
-  }
-}
-
-    /* Reset y base */
     body, html {
       margin: 0; padding: 0; height: 100%;
       font-family: 'Open Sans', sans-serif;
@@ -57,7 +16,6 @@
       position: relative;
     }
 
-    /* Overlay oscuro para mejorar legibilidad */
     body::before {
       content: '';
       position: fixed;
@@ -66,38 +24,34 @@
       z-index: 0;
     }
 
-    /* Contenedor principal mejorado */
-   /* Contenedor principal sin tono amarillo */
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  margin: 3rem auto 4rem auto;
-  padding: 3rem 3.5rem 4rem 3.5rem;
-  background: #ffffff; /* Fondo blanco puro */
-  border-radius: 24px;
-  border: 3px solid #cccccc; /* borde gris claro */
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.12),
-    inset 0 0 10px rgba(255, 255, 255, 0.9);
-  backdrop-filter: contrast(1.05);
-  transition: box-shadow 0.4s ease;
-  text-align: center;
-  font-weight: 600;
-  color: #333333; /* texto gris oscuro */
-  text-shadow: none;
-}
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 3rem auto 4rem auto;
+      padding: 3rem 3.5rem 4rem 3.5rem;
+      background: #ffffff;
+      border-radius: 24px;
+      border: 3px solid #cccccc;
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12),
+        inset 0 0 10px rgba(255, 255, 255, 0.9);
+      backdrop-filter: contrast(1.05);
+      transition: box-shadow 0.4s ease;
+      text-align: center;
+      font-weight: 600;
+      color: #333333;
+      text-shadow: none;
+    }
 
-.container:hover,
-.container:focus-within {
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.18),
-    inset 0 0 20px rgba(255, 255, 255, 0.95);
-  cursor: default;
-}
+    .container:hover,
+    .container:focus-within {
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18),
+        inset 0 0 20px rgba(255, 255, 255, 0.95);
+      cursor: default;
+    }
 
-
-    /* Tipografía rancho */
     h1, h2 {
       font-family: 'Special Elite', monospace;
       color: #5a3e1b;
@@ -106,36 +60,35 @@
     }
 
     h1 {
-      font-size: 3.8rem;
+      font-size: 3.2rem;
     }
 
     h2 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       text-shadow: 1px 1px 0 #f0e8b8;
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       line-height: 1.6;
       margin: 0.75rem 0;
       color: #4a3c2c;
       text-shadow: 0 1px 1px rgba(255 255 255 / 0.7);
     }
 
-    /* Botón confirmación mejorado */
     .btn-confirm {
       display: inline-block;
-      margin: 3rem auto 0 auto;
+      margin: 2.5rem auto 0 auto;
       background: transparent;
-      color: #b28a39;
-      border: 3.5px solid #b28a39; /* borde amarillo-café */
-      padding: 0.9rem 3.4rem;
-      font-size: 1.3rem;
+      color: #5a3e1b;
+      border: 3px solid #5a3e1b;
+      padding: 0.8rem 2.5rem;
+      font-size: 1.2rem;
       font-family: 'Special Elite', monospace;
-      border-radius: 40px;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(178, 138, 57, 0.4);
+      box-shadow: 0 4px 10px rgba(90, 62, 27, 0.4);
       text-decoration: none;
       user-select: none;
       transition:
@@ -144,20 +97,20 @@
         box-shadow 0.35s ease,
         transform 0.25s ease;
     }
+
     .btn-confirm:hover,
     .btn-confirm:focus {
-      background-color: #b28a39;
+      background-color: #5a3e1b;
       color: white;
-      box-shadow: 0 10px 28px rgba(178, 138, 57, 0.85);
-      transform: scale(1.08);
+      box-shadow: 0 10px 28px rgba(90, 62, 27, 0.75);
+      transform: scale(1.05);
       outline: none;
     }
 
-    /* Contador */
     #countdown {
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       font-family: 'Special Elite', monospace;
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: #6b4e1e;
       text-shadow: 1px 1px 0 #f0e8b8;
       letter-spacing: 0.06em;
@@ -167,53 +120,72 @@
     #countdown span {
       display: inline-block;
       min-width: 60px;
-      background: #b28a39;
+      background: #5a3e1b;
       color: white;
       border-radius: 12px;
       padding: 0.25rem 0.7rem;
       margin: 0 0.35rem;
-      box-shadow: 0 5px 12px rgba(178, 138, 57, 0.75);
+      box-shadow: 0 5px 12px rgba(90, 62, 27, 0.75);
       transition: background-color 0.3s ease;
     }
 
     #countdown span:hover {
-      background-color: #d1af3c;
-      box-shadow: 0 7px 16px rgba(209, 175, 60, 0.9);
+      background-color: #7c5c2d;
+      box-shadow: 0 7px 16px rgba(124, 92, 45, 0.9);
     }
 
-    /* Animación fade + escala */
-    @keyframes fadeScaleIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.85);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.9rem;
+        font-size: 2.5rem;
       }
       h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
       p {
-        font-size: 1.15rem;
+        font-size: 1rem;
       }
       .container {
-        margin: 2rem 1rem 3rem 1rem;
-        padding: 2.5rem 2.5rem 3.5rem 2.5rem;
+        margin: 2rem 1rem;
+        padding: 2rem;
+        width: 95%;
       }
       #countdown {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
       #countdown span {
         min-width: 48px;
         margin: 0 0.25rem;
+      }
+      .btn-confirm {
+        font-size: 1rem;
+        padding: 0.6rem 1.8rem;
+        border-radius: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+      #countdown {
+        font-size: 1.2rem;
+      }
+      #countdown span {
+        min-width: 40px;
+        padding: 0.2rem 0.5rem;
+        margin: 0 0.2rem;
+        font-size: 0.95rem;
+      }
+      .btn-confirm {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.5rem;
+        margin-top: 1.5rem;
       }
     }
   </style>
@@ -241,7 +213,6 @@
   </main>
 
   <script>
-    // Fecha y hora del evento (Año, Mes-1, Día, Hora, Minutos, Segundos)
     const eventDate = new Date(2025, 7, 2, 17, 0, 0); // 2 agosto 2025, 17:00 hrs
 
     function updateCountdown() {
@@ -269,4 +240,4 @@
     updateCountdown();
   </script>
 </body>
-</html> 
+</html>
