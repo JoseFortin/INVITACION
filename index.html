@@ -4,90 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Invitación Cumpleaños Adelmo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&family=Rye&family=Special+Elite&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #2f1e12 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-      color: #fefae0;
+      background: #f4f1ec;
+      color: #3e2e20;
     }
+
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'), #f4f1ec;
+      padding: 4rem 2rem;
       text-align: center;
-      color: #f5deb3;
-      position: relative;
-      border-bottom: 12px solid #8B5E3C;
-      font-family: 'Rye', cursive;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+      border-bottom: 5px solid #a1683a;
     }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(47, 30, 18, 0.75);
-      z-index: 1;
-    }
-    .hero-content {
-      z-index: 2;
-      animation: fadeIn 2s ease-in-out;
-    }
+
     .hero h1 {
-      font-size: 4rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.8rem;
-      margin-top: 1rem;
       font-family: 'Playfair Display', serif;
-      color: #f5deb3;
-    }
-    .countdown-wrapper {
-      max-width: 700px;
-      margin: -80px auto 40px;
-      text-align: center;
-      font-family: 'Special Elite', monospace;
-      animation: fadeInUp 1.5s ease-in-out;
-      user-select: none;
-    }
-    .countdown {
-      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
-      border: 8px solid #a1683a;
-      border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(101, 60, 10, 0.7);
-      padding: 1.5rem 3rem 1.5rem 7rem;
       font-size: 3rem;
-      color: #f5deb3;
-      position: relative;
-      letter-spacing: 2px;
-      display: inline-block;
-      min-width: 420px;
-      line-height: 1.3;
-      font-weight: 700;
+      color: #5a3e28;
+      margin-bottom: 1rem;
     }
-    .countdown svg.horse-icon {
-      position: absolute;
-      left: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 64px;
-      height: 64px;
-      fill: #a1683a;
-    }
-    .ornament {
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #3e2e20;
       max-width: 700px;
-      margin: 0 auto 12px;
-      height: 25px;
-      color: #a1683a;
+      margin: 0 auto;
     }
+
     .details {
-      background: rgba(255, 248, 230, 0.95); /* más cálido sin tanto amarillo */
+      background: rgba(255, 248, 230, 0.95);
       margin: 20px auto 40px;
       padding: 3rem 2rem;
       max-width: 750px;
@@ -97,153 +45,66 @@
       border: 6px solid #a1683a;
       animation: fadeInUp 1.5s ease-in-out;
     }
+
     .details h2 {
-      font-family: 'Rye', cursive;
-      font-size: 2.5rem;
-      text-align: center;
-      color: #6b3e26;
-    }
-    .details p {
-      font-size: 1.2rem;
-      text-align: center;
-    }
-    .rsvp {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .rsvp button {
-      padding: 0.9rem 2rem;
-      background-color: #6b3e26;
-      color: white;
-      border: 2px solid #f5deb3;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      cursor: pointer;
       font-family: 'Playfair Display', serif;
-    }
-    .rsvp button:hover {
-      background-color: #4e2c1b;
-    }
-    .confirmation-message {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #2e7d32;
-      display: none;
+      font-size: 2rem;
+      margin-bottom: 1rem;
       text-align: center;
     }
 
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(40px); } 100% { opacity: 1; transform: translateY(0); } }
+    .details p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #5a3e28;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2.2rem;
       }
-      .hero p {
-        font-size: 1.2rem;
-      }
-      .countdown {
-        font-size: 1.4rem;
-        padding-left: 5rem;
-        min-width: auto;
-        padding-right: 2rem;
-      }
-      .countdown svg.horse-icon {
-        width: 40px;
-        height: 40px;
-        left: 0.8rem;
-      }
+
       .details {
         padding: 2rem 1rem;
-      }
-      .details h2 {
-        font-size: 1.8rem;
-      }
-      .details p {
-        font-size: 1rem;
-      }
-      .rsvp button {
-        font-size: 1rem;
-        padding: 0.7rem 1.2rem;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Está cumpliendo 65 Años</h1>
-      <p>Acompáñanos a celebrar a Adelmo Contreras</p>
-    </div>
-  </div>
-
-  <div class="ornament">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"></svg>
-  </div>
-
-  <br><br><br>
-  <div class="countdown-wrapper">
-    <div class="countdown" id="countdown">
-      <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 52c2-4 4-6 8-6s8-2 10-6 6-10 10-12 8-6 10-6c-1-1-4-3-7-3-4 0-8 3-10 5-3 3-5 6-6 9-1 1-2 1-3 0-1-1-1-2-2-4-1-3-4-5-5-7-1-2-2-3-4-3-2 0-4 1-5 2-3 4-3 9-3 14 0 4 1 7 3 10z"/>
-      </svg>
-      Cargando cuenta regresiva...
-    </div>
-  </div>
-
-  <div class="ornament">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"></svg>
+    <h1>Estás Invitado al Cumpleaños de Adelmo</h1>
+    <p>¡Acompáñanos a celebrar un día muy especial con comida, música y mucha diversión!</p>
   </div>
 
   <div class="details">
-    <h2>Detalles del evento</h2>
+    <h2>Detalles del Evento</h2>
     <p><strong>Fecha:</strong> Sábado 2 de agosto de 2025</p>
-    <p><strong>Hora:</strong> 6:00 PM</p>
+    <p><strong>Hora:</strong> 5:00 PM</p>
     <p><strong>Lugar:</strong> Casa de Alex</p>
-
-    <div class="rsvp">
-      <p>Por favor confirma tu asistencia</p>
-      <button onclick="confirmarAsistencia()">Confirmar asistencia</button>
-      <div class="confirmation-message" id="mensajeConfirmacion">Gracias por confirmar tu asistencia. ¡Te esperamos!</div>
-    </div>
+    <p><strong>Dirección:</strong> Colonia Las Uvas, Calle La Ceiba, Casa 24</p>
+    <p>Trae tu mejor actitud y prepárate para disfrutar una tarde inolvidable.</p>
   </div>
 
-  <script>
-    function confirmarAsistencia() {
-      const mensaje = document.getElementById('mensajeConfirmacion');
-      mensaje.style.display = 'block';
-    }
-
-    const countdownElement = document.getElementById('countdown');
-    const eventDate = new Date('August 2, 2025 18:00:00').getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
-
-      if (distance < 0) {
-        countdownElement.innerHTML = `¡El evento ya comenzó!`;
-        clearInterval(countdownInterval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownElement.innerHTML = `
-        <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 52c2-4 4-6 8-6s8-2 10-6 6-10 10-12 8-6 10-6c-1-1-4-3-7-3-4 0-8 3-10 5-3 3-5 6-6 9-1 1-2 1-3 0-1-1-1-2-2-4-1-3-4-5-5-7-1-2-2-3-4-3-2 0-4 1-5 2-3 4-3 9-3 14 0 4 1 7 3 10z"/>
-        </svg>
-        Faltan <strong>${days}</strong> días, <strong>${hours}</strong> horas, <strong>${minutes}</strong> minutos y <strong>${seconds}</strong> segundos para la celebración`;
-    }
-
-    const countdownInterval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
-
+  <div class="footer">
+    ¡Te esperamos con alegría!
+  </div>
 </body>
 </html>
