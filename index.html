@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1542300056-2c05f47c1cfc?auto=format&fit=crop&w=1950&q=80'); /* madera clara */
+      background-image: url('https://images.unsplash.com/photo-1545256433-06de0d6f49c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -17,65 +17,73 @@
     }
 
     .container {
-      background: rgba(255, 248, 230, 0.95); /* beige cálido translúcido */
+      background-color: rgba(255, 248, 230, 0.96); /* cálido claro */
       max-width: 700px;
-      margin: 5rem auto;
-      padding: 3rem;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       text-align: center;
-      border: 4px solid #d2b48c;
+      border: 6px solid #c59b69;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #7a542e;
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #6b3e1d;
     }
 
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      color: #a1683a;
+      font-size: 1.6em;
+      margin-bottom: 30px;
+      color: #8b5e3c;
     }
 
-    p {
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
+    .details {
+      font-size: 1.2em;
+      margin-top: 20px;
+      line-height: 1.6;
     }
 
     .footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #6d4c2f;
+      margin-top: 30px;
+      font-size: 1em;
+      color: #6b4c36;
     }
 
-    @media (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .container {
-        padding: 2rem;
-        margin: 2rem 1rem;
+        margin: 20px;
+        padding: 25px;
       }
 
       h1 {
-        font-size: 2.3rem;
+        font-size: 2.4em;
       }
 
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.3em;
+      }
+
+      .details {
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>¡Estás invitado!</h1>
+    <h1>¡Estás Invitado!</h1>
     <h2>Celebramos el cumpleaños de Adelmo</h2>
-    <p><strong>Fecha:</strong> Sábado 10 de agosto de 2025</p>
-    <p><strong>Hora:</strong> 5:00 PM</p>
-    <p><strong>Lugar:</strong> Casa de Alex</p>
+    <div class="details">
+      <p><strong>Fecha:</strong> Sábado 2 de agosto de 2025</p>
+      <p><strong>Hora:</strong> 5:00 PM</p>
+      <p><strong>Lugar:</strong> Casa de Alex</p>
+      <p>Ven y acompáñanos a pasar una tarde inolvidable con comida, música y diversión.</p>
+    </div>
     <div class="footer">
-      ¡No faltes, será una tarde llena de alegría!
+      <p>¡No faltes!</p>
     </div>
   </div>
 </body>
