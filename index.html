@@ -3,152 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Invitación Cumpleaños Adelmo - Estilo Rancho</title>
+  <title>Invitación Cumpleaños Adelmo</title>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    html, body {
+      margin: 0; padding: 0;
       font-family: 'Open Sans', sans-serif;
-      background: url('https://cdn.pixabay.com/photo/2016/03/09/09/22/wood-1245960_1280.jpg') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: #4a3c2c;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(50, 30, 10, 0.6);
+      z-index: 0;
     }
 
     .container {
+      position: relative;
+      z-index: 1;
       max-width: 600px;
       margin: 2rem auto;
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 2rem 3rem;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
       text-align: center;
     }
 
-    h1 {
+    h1, h2 {
       font-family: 'Special Elite', cursive;
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-      color: #FFD700;
+      margin: 0.5rem 0;
+      color: #5a3e1b;
+    }
+
+    h1 {
+      font-size: 2.5rem;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
     }
 
     p {
       font-size: 1.1rem;
-      margin-bottom: 1rem;
+      margin: 0.5rem 0;
     }
 
     .btn-confirm {
-      background-color: #FFD700;
-      color: #000;
-      padding: 0.8rem 2.5rem;
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.8rem;
       font-size: 1.1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 1.5rem;
+      border: 2px solid #5a3e1b;
+      border-radius: 25px;
+      background: transparent;
+      color: #5a3e1b;
+      text-decoration: none;
+      font-family: 'Special Elite', monospace;
+      transition: all 0.3s ease;
     }
 
     .btn-confirm:hover {
-      background-color: #ffcc00;
+      background: #5a3e1b;
+      color: white;
     }
 
     #countdown {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 0.8rem;
-      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      font-family: 'Special Elite', monospace;
+      font-size: 1.3rem;
+      color: #5a3e1b;
     }
 
     #countdown span {
-      background-color: #000;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      font-weight: bold;
-      color: #FFD700;
-      min-width: 60px;
       display: inline-block;
+      background: #5a3e1b;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      margin: 0 0.25rem;
+      border-radius: 8px;
+      min-width: 45px;
     }
 
+    /* Mobile responsive */
     @media (max-width: 480px) {
+      .container {
+        margin: 1rem;
+        padding: 1.2rem;
+        border-radius: 12px;
+      }
+
       h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
 
       p {
         font-size: 1rem;
       }
 
-      .container {
-        width: 95%;
-        padding: 2rem 1.5rem 2.5rem 1.5rem;
-        margin: 1.5rem auto 2.5rem auto;
-        border-radius: 18px;
-      }
-
       .btn-confirm {
-        font-size: 1.1rem;
-        padding: 0.7rem 2.2rem;
-        border-radius: 30px;
-        margin-top: 2rem;
+        font-size: 1rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
       }
 
       #countdown {
-        font-size: 1.4rem;
-        margin-top: 2rem;
+        font-size: 1rem;
       }
 
       #countdown span {
-        min-width: 44px;
-        padding: 0.2rem 0.5rem;
-        margin: 0 0.2rem;
-        font-size: 0.95rem;
+        padding: 0.3rem 0.6rem;
+        min-width: 38px;
       }
     }
   </style>
 </head>
 <body>
-  <br>  <br>  <br>
-  <div class="container">
+  <main class="container">
     <h1>¡Estás Invitado!</h1>
-    <h2>Fiesta de Cumpleaños de Adelmo</h2>
-    <p>¡Te esperamos para celebrar con nosotros al más puro estilo rancho!</p>
-    <p><strong>Fecha:</strong> 10 de agosto de 2025</p>
+    <h2>A celebrar el cumpleaños de Adelmo</h2>
+    <p><strong>Fecha:</strong> Sábado 2 de agosto de 2025</p>
     <p><strong>Hora:</strong> 5:00 PM</p>
-    <p><strong>Lugar:</strong> Rancho La Herradura, Valle del Sol</p>
+    <p><strong>Lugar:</strong> Casa de Alex</p>
+    <p><strong>Dirección:</strong> Colonia Los Pinos, Calle 8</p>
+    <p>¡Será un momento especial con comida, música y mucha alegría!</p>
 
     <div id="countdown">
-      <span id="days">00</span>
-      <span id="hours">00</span>
-      <span id="minutes">00</span>
-      <span id="seconds">00</span>
+      <span id="days">00</span>d
+      <span id="hours">00</span>h
+      <span id="minutes">00</span>m
+      <span id="seconds">00</span>s
     </div>
 
-    <button class="btn-confirm">Confirmar Asistencia</button>
-  </div>
+    <a href="https://wa.me/504XXXXXXXX" class="btn-confirm" target="_blank" rel="noopener noreferrer">
+      Confirmar asistencia
+    </a>
+  </main>
 
   <script>
-    const countdown = document.getElementById('countdown');
-    const birthdayDate = new Date('2025-08-10T17:00:00');
+    const eventDate = new Date(2025, 7, 2, 17, 0, 0); // 2 agosto 2025 17:00
 
     function updateCountdown() {
       const now = new Date();
-      const diff = birthdayDate - now;
+      const diff = eventDate - now;
 
       if (diff <= 0) {
-        countdown.innerHTML = "<span>¡Ya empezó!</span>";
+        document.getElementById('countdown').textContent = "¡El evento ha comenzado!";
+        clearInterval(timer);
         return;
       }
 
@@ -157,13 +166,13 @@
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      document.getElementById('days').textContent = days.toString().padStart(2, '0');
-      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
     }
 
-    setInterval(updateCountdown, 1000);
+    const timer = setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
 </body>
