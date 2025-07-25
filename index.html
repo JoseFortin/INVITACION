@@ -9,11 +9,11 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #2f1e12 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-      color: #fefae0;
+      background: #fff8dc url('https://www.transparenttextures.com/patterns/gplay.png');
+      color: #3b2f14;
     }
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-image: url('https://images.unsplash.com/photo-1596464716121-8b94c2fd5e6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -22,16 +22,16 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
-      color: #f5deb3;
+      color: #fdd835;
       position: relative;
-      border-bottom: 12px solid #8B5E3C;
+      border-bottom: 12px solid #ffca28;
       font-family: 'Rye', cursive;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
     }
     .overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(47, 30, 18, 0.75);
+      background: rgba(255, 235, 59, 0.3);
       z-index: 1;
     }
     .hero-content {
@@ -46,7 +46,7 @@
       font-size: 1.8rem;
       margin-top: 1rem;
       font-family: 'Playfair Display', serif;
-      color: #f5deb3;
+      color: #fff59d;
     }
     .countdown-wrapper {
       max-width: 700px;
@@ -57,13 +57,13 @@
       user-select: none;
     }
     .countdown {
-      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
-      border: 8px solid #a1683a;
+      background: #fff8e1;
+      border: 8px solid #ffb300;
       border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(101, 60, 10, 0.7);
+      box-shadow: 0 15px 40px rgba(255, 202, 40, 0.7);
       padding: 1.5rem 3rem 1.5rem 7rem;
       font-size: 3rem;
-      color: #f5deb3;
+      color: #3b2f14;
       position: relative;
       letter-spacing: 2px;
       display: inline-block;
@@ -78,30 +78,24 @@
       transform: translateY(-50%);
       width: 64px;
       height: 64px;
-      fill: #a1683a;
-    }
-    .ornament {
-      max-width: 700px;
-      margin: 0 auto 12px;
-      height: 25px;
-      color: #a1683a;
+      fill: #fdd835;
     }
     .details {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 204, 0.95);
       margin: 20px auto 40px;
       padding: 3rem 2rem;
       max-width: 750px;
       border-radius: 20px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
       color: #4a3c2c;
-      border: 6px solid #a1683a;
+      border: 6px solid #fbc02d;
       animation: fadeInUp 1.5s ease-in-out;
     }
     .details h2 {
       font-family: 'Rye', cursive;
       font-size: 2.5rem;
       text-align: center;
-      color: #6b3e26;
+      color: #ef6c00;
     }
     .details p {
       font-size: 1.2rem;
@@ -113,16 +107,17 @@
     }
     .rsvp button {
       padding: 0.9rem 2rem;
-      background-color: #6b3e26;
-      color: white;
-      border: 2px solid #f5deb3;
+      background-color: #fbc02d;
+      color: #3b2f14;
+      border: 2px solid #fdd835;
       font-size: 1.2rem;
       border-radius: 10px;
       cursor: pointer;
       font-family: 'Playfair Display', serif;
     }
     .rsvp button:hover {
-      background-color: #4e2c1b;
+      background-color: #f57f17;
+      color: white;
     }
     .confirmation-message {
       margin-top: 1rem;
@@ -174,15 +169,12 @@
   <div class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Está cumpliendo 65 Años</h1>
+      <h1>¡Está cumpliendo 65 Años!</h1>
       <p>Acompáñanos a celebrar a Adelmo Contreras</p>
     </div>
   </div>
 
-  <div class="ornament">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"></svg>
-  </div>
-<br><br><br>
+  <br><br><br>
   <div class="countdown-wrapper">
     <div class="countdown" id="countdown">
       <svg class="horse-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -192,15 +184,11 @@
     </div>
   </div>
 
-  <div class="ornament">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"></svg>
-  </div>
-
   <div class="details">
     <h2>Detalles del evento</h2>
-    <p><strong>Fecha:</strong> Miércoles 30 de julio de 2025</p>
+    <p><strong>Fecha:</strong> Sábado 2 de agosto de 2025</p>
     <p><strong>Hora:</strong> 6:00 PM</p>
-    <p><strong>Lugar:</strong> Barrio El Centro</p>
+    <p><strong>Lugar:</strong> Casa de Alex</p>
 
     <div class="rsvp">
       <p>Por favor confirma tu asistencia</p>
@@ -216,7 +204,7 @@
     }
 
     const countdownElement = document.getElementById('countdown');
-    const eventDate = new Date('July 30, 2025 18:00:00').getTime();
+    const eventDate = new Date('August 2, 2025 18:00:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -246,3 +234,4 @@
 
 </body>
 </html>
+
